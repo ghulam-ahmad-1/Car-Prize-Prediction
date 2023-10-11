@@ -11,6 +11,7 @@ Data["Selling_type"]=Le.fit_transform(Data["Selling_type"])
 Data["Fuel_Type"] =Le.fit_transform(Data["Fuel_Type"])
 X = Data.drop(["Selling_Price"] , axis=1).values
 
+# Data Visualizayttion
 from sklearn.model_selection import train_test_split
 X_train , X_test , Y_train , Y_test = train_test_split(X, Y , test_size=0.3 , random_state=42)
 
@@ -21,9 +22,3 @@ model = regressor.fit(X_train,Y_train)
 Y_predict  = model.predict(X_test)
 
 Accuracy = model.score(X_test, Y_test)
-
-import matplotlib.pyplot as plt
-plt.scatter(Data["Selling_Price"] , Data["Fuel_Type"] , color = "Blue")
-plt.scatter(Data["Selling_Price"] , Data["Car_Name"] , color = "Red")
-plt.title("Selling Prize Comparison with Feul Type & CarName ")
-plt.show()
