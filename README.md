@@ -1,4 +1,3 @@
-<title>Car Price Prediction with Linear Regression</title>
 <h1>Car Price Prediction with Linear Regression</h1>
 
 <h2>Introduction</h2>
